@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>표 만들기</title>
+        
+        <style>
+            table{
+                width:70%;
+                border: solid 1px black;
+                border-collapse : collapse; /* 중복되는 표와 셀의 테두리를 한줄로 만든다. */
+            }
+
+            td, th{
+                border: solid 1px green;
+                padding : 10px;
+                font-size: 0.9em;
+                text-align: center;
+            }
+            
+            thead{
+                background-color: rgb(203, 209, 209);
+            }
+
+            caption{
+                padding-bottom : 20px;
+                font-size : 1.2em;                
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>표 만들기</h1>
+        <div>
+            <section>
+                <h1>시간표</h1>
+                <table>
+                    <caption> 2023년 시간표 </caption>
+                   <thead>      <!-- 테이블 제목 줄 -->
+                        <tr>
+                            <th>/</th>
+                            <th>월</th>
+                            <th>화</th>
+                            <th>수</th>
+                            <th>목</th>
+                            <th>금</th>
+                        </tr>
+                   </thead> 
+
+                   <tbody>
+                        <tr>
+                            <td>1교시</td>                            
+                            <td rowspan = "4">JAVA</td>
+                            <td rowspan = "2">2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>2교시</td>                            
+                            
+                            
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>                            
+                        </tr>
+                        <tr>
+                            <td>3교시</td>                            
+                            
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>4교시</td>                            
+                            
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td colspan = "6">점심시간</td>                                                                                    
+                        </tr>
+                        <tr>
+                            <td>5교시</td>                            
+                            <td rowspan = "4">HTML/CSS</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>6교시</td>                            
+                            
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>7교시</td>                            
+                            
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>8교시</td>                            
+                            
+                            <td>2</td>
+                            <td>3</td>
+                            <td colspan = "2">4</td>
+                            
+                        </tr>                        
+                   </tbody>
+                </table>
+            </section>
+        </div>
+    </body>
+</html>
