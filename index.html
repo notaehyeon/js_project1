@@ -1,254 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>노태현</title>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>  
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/index.js"></script>      
+</head>
 
-        <style>
-            
-            header, footer{
-                background-color: rgba(137, 43, 226, 0.379);
-            }
-            header {
-                height: 150px;
-            }
-            a{
-                padding: 10px;
-                /* margin: 8px; */
-            }
-            a:link, a:visited {
-                color: black;
-            }
-            a:hover {
-                background-color: white;
-                
-            }
-            nav {
-                background-color: aquamarine;
-                padding: 10px;
-                font-size: 16px;
-                text-align: center;
-                clear: both;
-            }
 
-            header > div {
-                float: left;
-                margin: 10px;
-            }
-            
-            section{
-                /* float: left; */
-                border: 2px black;
-                width: 45%;
-                height: auto;
-                margin: 10px;
-                border-bottom : 1px dotted #b5b7b8;
-                box-sizing: border-box
-            }
-
-            footer {
-                clear: both;
-                padding: 12px;
-                margin: 10px;
-                font-size: 14px;
-                text-align: center;
-            }
-            section h1 {
-                margin: 15px;
-                padding: 11px;
-                border: 4px solid black;
-                border-left-width: 10px;
-                /* border-radius: 8px; */
-                font-size: 18px;
-            }
-            #s1 h1 {
-                border-color: blue; 
-                border-top: 0;
-                border-bottom: 0;
-                border-right: 0;
-                
-            }
-            #s2 h1 {
-                border-color: rgb(83, 83, 6);                
-                border-top: 0;
-                border-bottom: 0;
-                border-right: 0;
-            }
-            #s3 h1 {
-                border-color: thistle;
-                border-top: 0;
-                border-bottom: 0;
-                border-right: 0;
-            }
-            #s4 h1 {
-                border-color: teal;
-                border-top: 0;
-                border-bottom: 0;
-                border-right: 0;
-            }
-            ol > li{
-                list-style-type: none;
-            }
-            li, .p1{
-                font-size: 15px;
-                /* margin: */
-            }
-            .p1 { 
-                margin: 20px;
-                padding: 10px;
-            }
-            .p2{
-                font-size: 13px;
-                text-align: center;
-            }
-
-            table{                
-                font-size: 0.9em;
-                text-align: center;
-                width : 120%;
-                border: solid 1px black;                
-                border-collapse : collapse;
-            }
-            
-            td, th{
-                border: solid 1px rgb(164, 164, 219);
-                padding : 10px;
-            }
-            th{
-                background-color: rgb(175, 211, 211);
-            }
-            caption{
-                padding-bottom : 15px;
-            }
-
-            
-        </style>
-    </head>
-
-        <body>
-
-            <!-- 제목 영역 -->
-            <header>
-                <!-- 사진 영역 -->
-                <div>
-                    <img src="./notaehyeon.jpg" width="100">
-                </div>
-
-                <div>
-                    <h1> No Tae Hyeon </h1>
-                    <p>노태현</p>
-                </div>
-            </header>
-
-            <!-- 메뉴 영역 - 네비게이션 영역 -->
-            <nav>
-                <a href="#s1">[개인정보]</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="#s2">[학력사항]</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="#s3">[자격사항]</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="#s4">[자기소개]</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href = "survey.html">[설문조사]</a>
-            </nav>
-
-            
-            <!-- 내용 영역-->
-            
-            
-
-                <!-- 개인정보 내용 영역 -->
-            <section id ="s1">
-            <div>
-                <h1>개인정보</h1>
-            <ol>
-                <li><span class="material-icons">
-                    contact_emergency
-                    </span>&nbsp;&nbsp;
-                    본인 성명 : 노태현</li>
-                <li><span class="material-icons">
-                    phone
-                    </span>&nbsp;&nbsp;
-                    연락처 : 010 - 0000 - 0000</li>
-                <li><span class="material-icons">
-                    markunread
-                    </span>&nbsp;&nbsp;
-                    E-main : 00000000@naver.com </li>
-                <li><span class="material-icons">
-                    home_filled
-                    </span>&nbsp;&nbsp;
-                    주소 : 전남 광양시 ~~</li>
-            </ol>
-            </div>
+<body>
+    <div id="root">
+  
+      <header><h1 id="h1">Dice Game</h1></header>
+        <main id="content">            
+            <section id="msg"> </section>
+            <section id="inNum">
+                <form name="form1" id="form1">
+                <fieldset>
+                    <legend>번호선택</legend>
+                    <input type="radio" name="num" value="1" id="r1"><label for="r1"> 1 </label>
+                    <input type="radio" name="num" value="2" id="r2"><label for="r2"> 2 </label>
+                    <input type="radio" name="num" value="3" id="r3"><label for="r3"> 3 </label>
+                    <input type="radio" name="num" value="4" id="r4"><label for="r4"> 4 </label>
+                    <input type="radio" name="num" value="5" id="r5"><label for="r5"> 5 </label>
+                    <input type="radio" name="num" value="6" id="r6"><label for="r6"> 6 </label>
+                </fieldset>
+                </form>
             </section>
-
-            <!-- 학력사항 내용 영역 -->
-            <section id ="s2">                
-                <div>
-                    <h1>학력사항 테이블표</h1>
-                    <table>
-                        <caption>학력 사항</caption>
-                        <thead>
-                            <tr>
-                                <th>출신 학교</th>
-                                <th>전공</th>
-                                <th>기간</th>
-                                <th>구분</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td>부산대학교</td>
-                                <td>전기공학전공</td>
-                                <td>2016.03 ~ 2023.02</td>
-                                <td>졸업 예정</td>
-                            </tr>
-                            <tr>
-                                <td>광양고등학교</td>
-                                <td>이과</td>
-                                <td>2013.03 ~ 2016.02</td>
-                                <td>졸업</td>
-                            </tr>
-                            <tr>
-                                <td>광양중학교</td>
-                                <td></td>
-                                <td>2010.03 ~ 2013.02</td>                     
-                                <td>졸업</td>                            
-                        </tbody>
-                    </table>
-                
-                </div>
+            <section id="bt">
+                <button id="bt1" onclick="showDice()">주사위 선택</button>
+                <button id="bt2" onclick="showOk()">확인</button>
             </section>
-            <!-- 자격사항 내용 영역 -->
-            <section id ="s3">
-                <div>
-                    <h1>학력사항</h1>
-                
-                <ul>
-                    <li>2023.02 부산대학교 졸업</li>
-                    <li>2013.02-2016 광양고등학교 졸업</li>
-                    <li>광양중학교 졸업</li>
-                    <li>광양서초등학교 졸업</li>
-                </ul>
-                </div>
-            </section>
-            <!-- 자기소개 영역-->
-            <section id ="s4">
-                <div><h1>자기소개</h1>
-                    <p class ="p1">
-                    </p>
-                </div>
-            </section>
-
-            <!-- 꼬리말 영역 -->
-            <footer>
-                <p>&copy; NOTH &nbsp;&nbsp;&nbsp;&nbsp; AI 활용 빅데이터분석 풀스텍서비스 SW 개발자 양성과정</p>
-            </footer>
-
-            <p class="p2">위로<a href="#"><span class="material-icons">
-                expand_less
-                </span></a> </p>
-        </body>
+        </main>
+    </div> 
+</body>
 </html>
